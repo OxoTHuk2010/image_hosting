@@ -60,6 +60,23 @@ async function handleFile(file){
     }
 }
 
+async function copyUrl() {
+    if(!currentUrl) return;
+
+    try{
+        await navigator.clipboard.writeText(currentUrl)
+        showStatus('URL copied', 'success')
+
+        const btn = document.getElementById('copyButton')
+        const oldText = btn.textContent
+        btn.textContent = 'Copied'
+        setTimeout(()=> btn.textContent = oldText, 2000)
+    }
+    catch{
+        showStatus('Failed to copy URL', 'error')
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const dropArea = document.getElementById('drop-area')
     const fileInput = document.getElementById('fileInput')
@@ -85,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     fileInput.addEventListener('change', (e) => {
-        if(e.target.file[0]){
-            handleFile(e.target.file[0])
+        if(e.target.files[0]){
+            handleFile(e.target.files[0])
         }
     })
 
