@@ -18,7 +18,7 @@ function showStatus(message, type){
     }
 }
 
-function validateFile(){
+function validateFile(file){
     if(!ALLOWED_MIMETYPES.includes(file.type)){
         showStatus('Onle .jpg .png and .gif', 'error')
         return false;
