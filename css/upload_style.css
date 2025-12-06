@@ -140,6 +140,10 @@ input[type="file"]{
     margin-right: auto;
 }
 
+.upload-box.dragover{
+    background-color: #798aa8;
+}
+
 .current_upload>h2 {
     font-family: var(--font-family);
     font-weight: 700;
@@ -184,4 +188,16 @@ input[type="file"]{
     position: relative;
     left: 465px;
     top: -47px;
+}
+
+.upload-status.success {
+    background-color: #2ee046;
+    color: aquamarine;
+    border: 1 px solid #cfded2;
+}
+
+.upload-status.failed {
+    background-color: #868c87;
+    color: red;
+    border: 1 px solid rgba(174, 185, 177, 0.5);
 }
