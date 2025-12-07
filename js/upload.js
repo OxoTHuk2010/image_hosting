@@ -35,7 +35,7 @@ function validateFile(file){
 async function handleFile(file){
     if(!file || !validateFile(file)) return;
 
-    setTimeout(() => {showStatus('Uploading....', 'info')}, 2000)
+    showStatus('Uploading....', 'info')
 
     try{
         const base64 = await fileToBase64(file)
