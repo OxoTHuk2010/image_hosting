@@ -6,9 +6,17 @@ function getFileIcon(filename){
     return icons[ext] || '🗂️'
 }
 
+function openImageInNewTab(base64Url) {
+    fetch(base64Url)
+        .then(res => res.blob())
+        .then(blob => {
+            const blobUrl = URL.createObjectURL(blob);
+            window.open(blobUrl, "_blank");
+        })
+        .catch(err => console.error("Failed to open image", err))
+}
 
 //Создание эдемент изображения
-
 function createImageItem(image){
     const item = document.createElement('div')
     item.className = 'image-item'
@@ -25,7 +33,12 @@ function createImageItem(image){
     </div>
 
     <div class = "image-url-wrapper">
-    <a href = "${image.url}" class = "image-url" target = "_blank" title = "${image.url}">${shotUrl}</a>
+        <a href = "#"
+            class = "image-url"
+            onclick="openImageInNewTab('${image.url}')"
+            title = "${image.url}">
+            ${shotUrl}
+        </a>
     </div>
 
     <div class = "image-delete">
