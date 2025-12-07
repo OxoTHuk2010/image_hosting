@@ -44,7 +44,7 @@ async function handleFile(file){
         if(success) {
             showStatus('Upload successful!', 'success')
 
-            const input = document.getElementById('current-upload-input')
+            const input = document.getElementById('currentUploadInput')
             if(input){
                 input.value = base64.substring(0, 50 ) + '...'
                 currentUrl = base64
