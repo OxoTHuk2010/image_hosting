@@ -14,7 +14,7 @@ function saveImage(name, url, size) {
             name: name,
             url: url,
             size: size,
-            date: new Date().toISOString
+            date: new Date().toISOString()
         }
 
         images.push(newImage)
