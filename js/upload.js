@@ -33,7 +33,7 @@ function validateFile(file){
 }
 
 async function handleFile(file){
-    if(!file || validateFile(file)) return;
+    if(!file || !validateFile(file)) return;
 
     showStatus('Uploading....', 'info')
 

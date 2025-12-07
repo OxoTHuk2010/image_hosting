@@ -196,7 +196,14 @@ input[type="file"]{
     border: 1 px solid #cfded2;
 }
 
-.upload-status.failed {
+.upload-status.info {
+    background-color: #31e9e9;
+    color: aquamarine;
+    border: 1 px solid #cfded2;
+}
+
+
+.upload-status.error {
     background-color: #868c87;
     color: red;
     border: 1 px solid rgba(174, 185, 177, 0.5);
