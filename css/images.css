@@ -92,4 +92,110 @@ body {
     display: grid;
     grid-template-columns: 2fr 3fr 1fr;
     gap: 20px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #E8EEFF;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.image-item:last-child{
+    border-bottom: none;
+}
+
+.image-item:hover{
+    background-color: #F9FAFF;
+}
+
+.image-name{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: #0b0b0b;
+}
+
+.image-icon{
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.image-name span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.image-url-wrapper{
+    text-align: left;
+}
+
+.image-url{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    color: #0060ff;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.image-url:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.image-delete{
+    text-align: center;
+}
+
+.delete-btn{
+    background: transparent;
+    border: 2px solid #E8EEFF;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover{
+    background-color: #ffebee;
+    border-color: #ff5252;
+    transform: scale(1.05);
+}
+
+.empty-state{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-state p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #0b0b0b;
+    margin-bottom: 20px;
+}
+
+.empty-state a{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #0060ff;
+    padding: 12px 16px;
+    border-radius: 7px;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s ease;
+}
+
+.empty-state a:hover{
+    opacity: 0.8;
 }
