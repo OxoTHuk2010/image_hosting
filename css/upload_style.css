@@ -165,7 +165,7 @@ input[type="file"]{
     background: #FAFAFA;
 }
 
-.input-with-button currentUploadInput {
+.input-with-button #currentUploadInput {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
