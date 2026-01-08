@@ -43,7 +43,7 @@ async function loadBaseImages() {
 
 async function refreshImagesAndRestart() {
     const base = await loadBaseImages();
-    const uploaded = getImages().map(img => img.url);
+    const uploaded = getAllImages().map(img => img.url);
 
     images = uniq([...base, ...uploaded]);
 
